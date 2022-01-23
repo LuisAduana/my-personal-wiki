@@ -1,0 +1,35 @@
+{
+    "rules": {
+        "no-any": true, // No permite usar any
+        "curly": true,  // Obliga a cerrar con llaves if / else / for / do / while
+        "quotemark": [ true, "single" ], // Prioriza el uso de comillas simples
+        "adjacent-overload-signatures": true, //Fuerza a escribir la sobrecarga de constructores en secuencia
+        "ban-ts-ignore": true, // Banea los comentarios con doble slash
+        "member-access": [ true, "no-public", "check-accessor, check-constructor", "check-parameter-property" ], // TODO Verificar esta regla
+        "member-ordering": true, // Hace cumplir rl ordenamiento
+        "no-empty-interface": true,
+        "no-for-in": true,
+        "no-inferrable-types": [ true, "ignore-params", "ignore-properties" ],
+        "no-internal-module": true,
+        "no-magic-numbers": true,
+        "no-non-null-assertion": true,
+        "no-conditional-assignment": true,
+        "no-unbound-method": true,
+        "no-sparse-arrays": true,
+        "restrict-plus-operands": true,
+        "no-invalid-template-strings": true,
+        "no-boolean-literal-compare": true,
+        "cyclomatic-complexity": true,
+        "whitespace": [ true, "check-branch", "check-decl", "check-operator", "check-module", "check-typecast", "check-separator", "check-rest-spread", "check-type", "check-typecast", "check-type-operator", "check-preblock", "check-postbrace" ],
+        "import-spacing": true,
+        "align": [ true, "arguments", "elements", "members", "parameters", "statements" ],
+        "file-name-casing": [ true, "kebab-case" ],
+        "encoding": true,
+        "comment-format": [ true, "check-uppercase", { "ignore-words": [ "TODO" ] } ],
+        "class-name": true,
+        "increment-decrement": true,
+        "no-unnecessary-initializer": true,
+        "one-variable-per-declaration": true,
+        "ordered-imports": [ true, { "import-sources-order": "lowercase-last", "named-imports-order": "lowercase-first" } ]
+    }
+}
