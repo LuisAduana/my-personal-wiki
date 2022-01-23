@@ -7,7 +7,7 @@
 		<mat-list>
 			<div mat-subheader>Linux</div>
 			<mat-selection-list #shoes [multiple]="false">
-				<mat-list-option *ngFor="let issue of linuxIssues" (click)="selectOption(issue)">
+				<mat-list-option *ngFor="let issue of linuxIssues" (click)="selectOption(issue)" [disabled]="issue.disabled">
 					<mat-icon mat-list-icon>{{issue.icon}}</mat-icon>
 					<div mat-line>{{issue.name}}</div>
 					<div mat-line> {{issue.updated | date}} </div>
@@ -16,7 +16,7 @@
 			<mat-divider></mat-divider>
 			<div mat-subheader>Windows</div>
 			<mat-selection-list #shoes [multiple]="false">
-				<mat-list-option *ngFor="let issue of windowsIssues" (click)="selectOption(issue)">
+				<mat-list-option *ngFor="let issue of windowsIssues" (click)="selectOption(issue)" [disabled]="issue.disabled">
 					<mat-icon mat-list-icon>{{issue.icon}}</mat-icon>
 					<div mat-line>{{issue.name}}</div>
 					<div mat-line> {{issue.updated | date}} </div>

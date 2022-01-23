@@ -7,6 +7,7 @@ export interface IIssues {
 	name: string;
 	updated: Date;
 	path: string;
+	disabled: boolean;
 }
 
 @Component({
@@ -18,12 +19,12 @@ export class AppComponent {
 	@ViewChild('sidenav') sidenav: MatSidenav;
 
 	linuxIssues: IIssues[] = [
-		{ icon: 'report_problem', name: 'Repositorios rotos', updated: new Date('1/1/22'), path: 'break-repository' },
-		{ icon: 'perm_identity', name: 'Requiere Auth al guardar archivo', updated: new Date('1/17/22'), path: '' },
-		{ icon: 'rss_feed', name: 'Crear Zona de Anclaje', updated: new Date('1/28/22'), path: '' },
+		{ icon: 'report_problem', name: 'Repositorios rotos', updated: new Date('1/1/22'), path: 'break-repository', disabled: false },
+		{ icon: 'perm_identity', name: 'Auth al guardar archivo', updated: new Date('1/17/22'), path: '', disabled: true },
+		{ icon: 'rss_feed', name: 'Crear zona de anclaje', updated: new Date('1/28/22'), path: 'hotspot-wifi', disabled: false },
 	];
 	windowsIssues: IIssues[] = [
-		{ icon: 'block', name: 'En desarrollo...', updated: new Date('1/23/22'), path: '' },
+		{ icon: 'block', name: 'En desarrollo...', updated: new Date('1/23/22'), path: '', disabled: true },
 	];
 
 	constructor (private router: Router) { }

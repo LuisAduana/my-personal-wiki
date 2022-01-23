@@ -14,11 +14,13 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { BreakReposirotyComponent } from './components/break-reposiroty/break-reposiroty.component';
+import { HotspotWifiComponent } from './components/hotspot-wifi/hotspot-wifi.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		BreakReposirotyComponent,
+		HotspotWifiComponent,
 	],
 	imports: [
 		BrowserModule,
