@@ -1,0 +1,14 @@
+{
+	"attr-value-not-empty": false,
+	"attr-no-duplication": true,
+	"attr-lowercase": false,
+	"attr-unsafe-chars": true,
+	"attr-value-double-quotes": true,
+	"id-class-ad-disabled": true,
+	"id-class-value": "dash",
+	"id-unique": true,
+	"inline-script-disabled": true,
+	"inline-style-disabled": true,
+	"space-tab-mixed-disabled": "tab",
+	"src-not-empty": true
+}
