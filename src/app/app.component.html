@@ -1,8 +1,28 @@
 <mat-sidenav-container class="main-container" (backdropClick)="sidenav.close()">
 	<mat-sidenav #sidenav class="sidenav-menu" (keydown.escape)="sidenav.close()" mode="over" disableClose>
-		<button mat-icon-button (click)="sidenav.close()">
+		<button mat-icon-button class="menu-sidenav-button" (click)="sidenav.close()">
 			<mat-icon>menu</mat-icon>
 		</button>
+
+		<mat-list>
+			<div mat-subheader>Linux</div>
+			<mat-selection-list #shoes [multiple]="false">
+				<mat-list-option *ngFor="let issue of linuxIssues" (click)="selectOption(issue)">
+					<mat-icon mat-list-icon>{{issue.icon}}</mat-icon>
+					<div mat-line>{{issue.name}}</div>
+					<div mat-line> {{issue.updated | date}} </div>
+				</mat-list-option>
+			</mat-selection-list>
+			<mat-divider></mat-divider>
+			<div mat-subheader>Windows</div>
+			<mat-selection-list #shoes [multiple]="false">
+				<mat-list-option *ngFor="let issue of windowsIssues" (click)="selectOption(issue)">
+					<mat-icon mat-list-icon>{{issue.icon}}</mat-icon>
+					<div mat-line>{{issue.name}}</div>
+					<div mat-line> {{issue.updated | date}} </div>
+				</mat-list-option>
+			</mat-selection-list>
+		</mat-list>
 	</mat-sidenav>
 
 	<mat-sidenav-content>
@@ -13,5 +33,7 @@
 			<span class="title">Mi Wiki Personal</span>
 			<span class="global-spacer"></span>
 		</mat-toolbar>
+
+		<router-outlet></router-outlet>
 	</mat-sidenav-content>
 </mat-sidenav-container>

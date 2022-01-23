@@ -1,4 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav/sidenav.d';
+import { Router } from '@angular/router';
+
+export interface IIssues {
+	icon: string;
+	name: string;
+	updated: Date;
+	path: string;
+}
 
 @Component({
 	selector: 'app-root',
@@ -6,15 +15,22 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
+	@ViewChild('sidenav') sidenav: MatSidenav;
 
-	adios = 0;
+	linuxIssues: IIssues[] = [
+		{ icon: 'report_problem', name: 'Repositorios rotos', updated: new Date('1/1/22'), path: 'break-repository' },
+		{ icon: 'perm_identity', name: 'Requiere Auth al guardar archivo', updated: new Date('1/17/22'), path: '' },
+		{ icon: 'rss_feed', name: 'Crear Zona de Anclaje', updated: new Date('1/28/22'), path: '' },
+	];
+	windowsIssues: IIssues[] = [
+		{ icon: 'block', name: 'En desarrollo...', updated: new Date('1/23/22'), path: '' },
+	];
 
-	hola (hola: number): number {
-		let manten = 0;
-		for (let i = 0; i < 1; i += 1) {
-			manten += manten;
-		}
+	constructor (private router: Router) { }
 
-		return this.adios + hola + manten;
+	selectOption (issue: IIssues): void {
+		this.sidenav.close();
+		this.router.navigate([issue.path]);
 	}
+
 }

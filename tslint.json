@@ -24,7 +24,6 @@
 		"no-trailing-whitespace": true,
 		"whitespace": [ true, "check-branch", "check-operator", "check-typecast", "check-decl", "check-module", "check-separator", "check-rest-spread", "check-type", "check-type-operator", "check-preblock", "check-postbrace" ],
 		"member-ordering": [ true, {
-	    "alphabetize": true,
 	    "order": [
 	      "public-static-field",
 	      "public-instance-field",
