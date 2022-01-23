@@ -12,7 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
 	declarations: [
-  	AppComponent
+		AppComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -21,9 +21,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 		MatToolbarModule,
 		MatButtonModule,
 		MatIconModule,
-		MatSidenavModule
+		MatSidenavModule,
 	],
 	providers: [],
-	bootstrap: [ AppComponent ]
+	bootstrap: [ AppComponent ],
 })
 export class AppModule { }
