@@ -20,7 +20,7 @@ export class AppComponent {
 
 	linuxIssues: IIssues[] = [
 		{ icon: 'report_problem', name: 'Repositorios rotos', updated: new Date('1/1/22'), path: 'break-repository', disabled: false },
-		{ icon: 'perm_identity', name: 'Auth al guardar archivo', updated: new Date('1/17/22'), path: '', disabled: true },
+		{ icon: 'perm_identity', name: 'Auth al guardar archivo', updated: new Date('1/17/22'), path: '', disabled: false },
 		{ icon: 'rss_feed', name: 'Crear zona de anclaje', updated: new Date('1/28/22'), path: 'hotspot-wifi', disabled: false },
 	];
 	windowsIssues: IIssues[] = [

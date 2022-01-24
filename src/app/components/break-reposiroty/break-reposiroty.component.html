@@ -1,18 +1,26 @@
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
-<p>break-reposiroty works!</p>
+<div class="view-container">
+	<h1>Repositorios Rotos</h1>
+	<p>
+		Por alguna razón los <span class="strong-text">repositorios</span> donde Manjaro descarga sus paquetes se rompen.
+		<br/><br/>
+		Para solucionar esto se deben actualizar las bases de datos de claves PGP de los desarrolladores de Arch Linux y Manjaro.
+	</p>
+	<p class="code-text">	sudo pacman-key --refresh-keys </p>
+
+	<p>	Después se cargarn las nuevas claves en pacman.	</p>
+	<p class="code-text">	sudo pacman-key --populate archlinux manjaro </p>
+
+	<p>	Eliminamos los paquetes que se intentaron actualizar y marcaron error. </p>
+	<p class="code-text">	sudo pacman -Scc </p>
+
+	<br/>
+	<p><span class="strong-text">¡Importante!</span> reiniciar el sistema. </p>
+
+	<p>Finalmente, sincronizar las bases de datos de los paquetes con el siguiente comando.</p>
+	<p class="code-text">sudo pacman -Syy</p>
+
+	<br/>
+	<p>Si no funciona. Primero nos aseguramos que el primer <b>mirror</b> esté en la lista blanca. Despúes </p>
+	<p class="code-text">sudo rm -R /var/lib/pacman/sync</p>
+	<p>Repetir todos los pasos anteriores.</p>
+</div>
