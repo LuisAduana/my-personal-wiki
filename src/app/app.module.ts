@@ -12,15 +12,18 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 import { BreakReposirotyComponent } from './components/break-reposiroty/break-reposiroty.component';
 import { HotspotWifiComponent } from './components/hotspot-wifi/hotspot-wifi.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		BreakReposirotyComponent,
 		HotspotWifiComponent,
+		HomeComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -33,6 +36,7 @@ import { HotspotWifiComponent } from './components/hotspot-wifi/hotspot-wifi.com
 		MatSidenavModule,
 		MatListModule,
 		MatDividerModule,
+		MatCardModule,
 	],
 	providers: [],
 	bootstrap: [ AppComponent ],
